@@ -12,6 +12,7 @@ import java.time.LocalDateTime
 class AccountController(private val respository: AccontRespository) {
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     fun create(@RequestBody account: Account): Account = this.respository.save(account)
 
     @GetMapping
