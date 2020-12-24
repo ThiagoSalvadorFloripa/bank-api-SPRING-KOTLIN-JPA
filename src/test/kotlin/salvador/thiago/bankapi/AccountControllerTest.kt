@@ -1,18 +1,16 @@
 package salvador.thiago.bankapi
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 import salvador.thiago.bankapi.entity.Account
-import salvador.thiago.bankapi.repository.AccontRespository
+import salvador.thiago.bankapi.repository.AccountRespository
 import java.time.LocalDateTime
 
 @SpringBootTest
@@ -20,7 +18,7 @@ import java.time.LocalDateTime
 class AccountControllerTest {
 
     @Autowired lateinit var mockMvc: MockMvc
-    @Autowired lateinit var accountRepository: AccontRespository
+    @Autowired lateinit var accountRepository: AccountRespository
 
     @Test
     fun `test find all`(){
